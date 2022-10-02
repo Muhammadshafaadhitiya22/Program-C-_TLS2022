@@ -1,0 +1,56 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+ int smouse, skey, smic, key, sum;
+ smouse = 12;
+ skey = 9;
+ smic = 7;
+ cout << "Pilih Produk yang anda inginkan" << endl;
+ cout << "1. Mouse, 2. Keyboard, 3. Mic" << endl;
+ cin >> key;
+ if (key == 1){
+     cout << "Stok Tersedia : " << smouse << endl;
+     cout << "Berapa jumlah barang yang akan anda beli? : " << endl;
+     cin >> sum;
+     if (sum <= smouse){
+         smouse = smouse - sum;
+         cout << "Transaksi berhasil" << endl;
+         cout << "Sisa Stok : " << smouse << endl;
+     }
+     else {
+         cout << "Stok tidak mencukupi" << endl;
+     }
+ }
+ else if (key == 2){
+     cout << "Stok tersedia : " << skey << endl;
+     cout << "Berapa jumlah barang yang anda ingin beli? " << endl;
+     cin >> sum;
+     if (sum <= skey){
+         skey = skey - sum;
+         cout << "Transaksi berhasil" << endl;
+         cout << "Sisa stok : " << skey << endl;
+     }
+     else {
+         cout << "Stok tidak mencukupi";
+     }
+ }
+ else if (key == 3){
+     cout << "Stok tersedia : " << skey << endl;
+     cout << "Berapa jumlah barang yang anda ingin beli? "<< endl;
+     cin >> sum;
+     if (sum <= smic){
+         smic = smic - sum;
+         cout << "Transaksi berhasil" << endl;
+         cout << "Sisa stok : " << smic << endl;
+     }
+     else {
+         cout << "Stok tidak mencukupi";
+     }
+ }
+   else {
+     cout << "Barang tidak tersedia";
+  }
+}
